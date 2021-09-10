@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* NOTA: no es posible crear objetos antes de declarar la clase
+         no se aplica el concepto de hosting
+        esto no es posible antes de crear una clase--> let persona2=new Persona("karla","perez") 
+        primero se debe crear la clase y de ahi un objeto*/
+        class Persona{
+            constructor(nombre,apellido){
+                this._nombre=nombre;
+                this._apellido=apellido; //en la propiedad se utiloza un guin bajo
+               
+            }
+            get nombre(){
+                    return this._nombre;
+                }
+            set nombre(nombre){
+                this._nombre=nombre;
+            }
+        }
+    
+    let persona1=new Persona("karina","torres");
+    //get se agrega para poder leer la informacion de un atributo
+    console.log(persona1.nombre);//get nombre
+    persona1.nombre="juan" //se manda a llamar el metodo set nombre("juan")
+   
+
+   
+
+    </script>
+</body>
+</html>

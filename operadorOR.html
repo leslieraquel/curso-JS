@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let caso1="dia de descanzo", caso2="vacaciones";
+        let asistencia="vacaciones";
+        if(asistencia==caso1 || asistencia==caso2){ //REGRESA VERDDDERO O FALSO SI CUALQUIERA DE LOS DOS SE CUMPLEN
+            console.log("Puede asistir al partido");
+        }else{
+            console.log("No puede asistir");
+        }
+        //otra forma
+        let vacaciones=false,dialibre=false;
+        if((vacaciones || dialibre)==true){
+            console.log("Puede asistir");
+
+        }else{
+            console.log("No puede asistir");
+        }
+    </script>
+
+   
+</html>

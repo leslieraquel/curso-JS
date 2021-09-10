@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let persona={
+            nombre:"leslie",
+            apellido:"Guaman",
+            nombreCompleto:function(){
+                return this.nombre+" "+this.apellido
+            }
+        }
+        //agegar nuevas propiedades al objeto y como eleminiar propiedades del objeto
+
+        //agergar una nueva propiedad
+        persona.telefono="09745152"; //agregando una propiedad
+        persona.telefono="111111";//modificando la propiedad agregada
+        console.log(persona);
+
+        delete persona.telefono; //eliminando una propiedad
+
+        //FORMAS PARA IMPRIMIR UN OBJETO
+        //IMPRIMIR UN OBJETO PARA UN NAVEGADOR WEB
+        //concatenar
+        console.log(persona.nombre+" "+persona.apellido)
+        //for in
+        for(nombrePropiedad in persona){
+            console.log(persona[nombrePropiedad]);
+        }
+        //otra forma para imprimir
+        let personaArray=Object.values(persona);
+        console.log(personaArray);
+
+        //metodo string 
+        let personaString= JSON.stringify(persona); //convierte el objeto a cadena
+        console.log(personaString);
+    </script>
+</body>
+</html>

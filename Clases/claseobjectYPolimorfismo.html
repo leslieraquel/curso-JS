@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //aplicando polimorfismo
+        Object.prototype.toString; //llamando al metodo toString
+        //clase padre
+        class Persona{
+            constructor(nombre,apellido){
+                this._nombre=nombre;
+                this._apellido=apellido;
+            }
+
+            get nombre(){
+                return this._nombre;
+            }
+            set nombre(nombre){
+                this._nombre=nombre;
+            }
+            get apellido(){
+                return this._apellido;
+            }
+            set apellido(apellido){
+                this._apellido=apellido;
+            }
+            NombreCompleto(){
+                return this._nombre+" "+this._apellido;
+            }
+            toString(){
+                return this.NombreCompleto();
+            }
+
+        }
+        //clase hija
+        class Empleado extends Persona{
+            constructor(nombre,apellido,departamento){
+                super(nombre,apellido);
+                this._departamento=departamento;
+            }
+            get departamento(){
+                return this._departamento;
+
+            }
+            set departamento(departamento){
+                this._departamento=departamento;
+            }
+            NombreCompleto(){
+                return super.NombreCompleto()+","+this._departamento;
+            }
+        }
+        //creando objetos
+        let persona1= new Persona("juan","jimenez");
+        console.log(persona1.toString());
+
+        let empleado1= new Empleado("leslie","guaman","sistemas");
+        console.log(empleado1.toString());
+        
+
+    </script>
+</body>
+</html>

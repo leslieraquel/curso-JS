@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //funciones de tipo fecha
+        //comparacion con funciones tipo flecha y tipo expresion
+        let suma= function(a,b){return a-b};
+        let resultadoresta=(5,3);//llamandfo la funcion
+        console.log(resultadoresta);
+        //funcion tipo flecha
+        const sumarFuncionFlecha=(c,d)=>(c+d);
+        let resultado=sumarFuncionFlecha(5,3);
+        console.log(resultado);
+
+        const saludar=(nombre,apellido,edad)=>("Hola"+" "+nombre+" "+
+                                                "Tu apellido parterno es:"+" "+apellido+" "+
+                                                "Y tu edad es"+" "+edad);
+        let saludo= saludar("leslie","guaman","22");
+        console.log(saludo);
+
+        //argumentos y parametros de una funcion
+        //parametros: son las variables que se deficnen a una funcion lista de valores que recibe una funcion
+        //argumentos:son los valores que se asignan a los parametros cuando se llama una funcion
+
+        let argumentos= function(j=7,k=9){
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+            return j+k+arguments[2]
+        };
+        let resultArgumentos=argumentos(10,11,3); //no es obligatorio que el numero de argumentos sea igual al numero de parametros
+        console.log("La suma de los argumentos de la funcion es: "+resultArgumentos);
+
+
+    </script>
+</body>
+</html>

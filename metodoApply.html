@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let persona={
+            nombre: "leslie",
+            apellido: "guaman",
+            NombreCompleto:function(titulo,telefono){
+               return titulo+": "+ this.nombre+ " "+ this.apellido+" "+telefono;
+            }
+        }
+        let persona2={
+            nombre: "janeth",
+            apellido:"jimenez"
+        }
+        //metodo apply tiene la misma funcionalidad del call
+
+        let arreglo=["Ing","1224141221"]; //se pasan los valores de la funcion mediante un arreglo
+        console.log(persona.NombreCompleto("lic","66778811"));
+        console.log(persona.NombreCompleto.apply(persona2,arreglo));//se pasan los valores de la funcion mediante un arreglo
+
+
+
+    </script>
+</body>
+</html>

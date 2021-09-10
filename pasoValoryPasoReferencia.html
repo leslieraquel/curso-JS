@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //paso por valor y paso por referencia
+        //ejemplo
+        //paso por valor: es cuando se utiliza tipos que no son objetos como numerico o booleano
+        //tipos primitivos
+         let x=10;  
+         //crear metodo
+         function cambiarValor(a){
+             a=20;
+             
+         }
+            //paso por valor
+            cambiarValor(x);//se esta pasando el valor de 10
+            console.log(x);
+           // console.log(a); //saldria un error por que no esta definida
+        //Paso por referencia
+        //se crea un objeto
+        const persona={ //atraves de la variable persona se puede acceder a los valores de los atributos del objeto
+            nombre:"leslie",
+            apellido:"guaman"
+        }
+
+        function cambiarValorObjeto(p1){
+            p1.nombre="jeison"; //se esta modifcando los atributos
+            p1.apellido="Caguana";
+        }
+        //paso por referencia
+        cambiarValorObjeto(persona);
+        console.log(persona);
+
+    </script>
+</body>
+</html>

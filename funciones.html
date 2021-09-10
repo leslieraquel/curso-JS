@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //una funcion es un codigo reutilizable que se puede llamar tantas veces como quisieramos
+        //una funcion debe realizar una tarea
+        //definiendo uuna funcion
+        //declaracion de la funcion
+        function miFuncion(a,b){
+            console.log(arguments);//arguments:se utiliza para saber cuantos elementos tiene una funcion se usa solo dentro de una funcion
+            console.log(arguments.length); //cuenta cuantos argumentos tiene la funcion
+            console.log("suma: "+(a+b));
+        }
+        //llamando a la funcion
+        miFuncion(10,20);
+        
+        function tablasMultiplicar(e){
+            console.log("Tabla del "+e);
+            for(let i=1;i<=10;i++)
+                console.log(i +"x"+e+"="+(i*e));
+        }
+        tablasMultiplicar(3);
+
+        //palabra return
+        function suma(x,y){
+                return x+y;
+        }
+        let resultado=suma(4,5);
+        console.log(resultado);
+        //funciones de expresion
+        //declaracion de funcion de tipo expresion
+        let resta=function(j,k){
+            return j-k};
+        let resultresta=resta(5, 1);
+        console.log(resultresta);
+        //funciones selfinvoque
+        (function (a,b){
+            console.log("Ejecutando la funcion:"+" "+(a+b));
+        })(4,5); //llamando la funcion
+        
+        console.log(typeof miFuncion);
+        //toString:es un  metodo convuierte nuestra funcion a texto
+        var miFuncionTexto = miFuncion.toString();
+        console.log(miFuncionTexto);
+        
+    </script>
+</body>
+</html>

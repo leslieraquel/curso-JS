@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //uso de call va a permitir llamar un metodo que esta definido en un objeto desde otro objeto
+        let persona1={ //creando un objeto
+            nombre:"juan",
+            apellido:"perez",
+            NombreCompleto:function(titulo,telefono){ //funcion dentro de un objeto
+                return titulo+": "+this.nombre+ " "+this.apellido+","+telefono;
+            }
+        }
+        let persona2={
+            nombre:"leslie",
+            apellido:"guaman"
+        }
+        //uso de call para usar el metodo nombre completo
+        //con los datos de persona2
+
+        console.log(persona1.NombreCompleto.call(persona2,"ing","111255445")); //se tiene q pasar los datos que se especifico en la funciondel objeto
+                                                                                //en este caso seria titulo y telefono
+
+        console.log(persona1.NombreCompleto());//aqui nos saldria undefine por que no estamos definiendo los datos en si
+    </script>
+</body>
+</html>

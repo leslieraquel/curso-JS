@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Funcion constructor de objetos de tipo Persona
+        //un constructor sirve para poder crear mas objetos de una sola funcion
+        function Persona(nombre,apellido,email){
+            this.nombre=nombre;
+            this.apellido=apellido;
+            this.email=email;
+            this.nombreCompleto=function(){ // creando una funcion para el nombre completo del obejto persona
+                    return this.nombre+" "+this.apellido;
+            };
+        }
+
+        let padre = new Persona("juan","perez","juan@hotmail.com"); //con esto se crea un nuevo objeto
+        console.log(padre);
+        console.log(padre.nombreCompleto());
+        let madre = new Persona("janeth","jimenez","janeth@hotmail.com");
+        console.log(madre);
+
+        /* nota:se puede observar que podemos crear varios objetos con los mismo parametros pero diferentes valores
+        con esto se tendria tantos objetos reservados en memoria cada uno con sus propios valores*/
+        
+        //cambiar un valor al obejto padre
+        padre.nombre="carlos"; //este cambio solo afecta al valor de nombre del objeto padre 
+        console.log(padre);
+        padre.telefono="098521412";
+        console.log(padre);
+
+    </script>
+</body>
+</html>

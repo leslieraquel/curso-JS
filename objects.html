@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*tipo primitivo: no contiene propeidades ni tampoco metodos*/
+        let x=10;
+        console.log(x.length);
+        let persona={
+            nombre: "leslie",//propiedades
+            apellido:"guaman",
+            email:"raquellezs@hotmail.com",
+            edad:28,
+            nombreCompleto:function(){ //creando una funcion dentro de un objeto
+                return this.nombre+" "+this.apellido; //con la plabra this se puede llamar las propiedades que tiene el objeto
+            }
+        }
+        console.log(persona.nombre);
+        console.log(persona.edad);
+        console.log(persona.apellido);
+        console.log(persona.email); //imprimiendocada catributo del objeto persona
+
+        console.log(persona);//imprimiendo todo el objeto
+
+        console.log(persona.nombreCompleto());//imprimiendo la funcion nombre completo que se encuentra dentro del objeto persona
+        
+        //new:palabra reservada para reservar espacio en memoria y crear un objeto
+
+        let persona2 = new Object(); //creando un objeto nuevo en memoria
+        persona2.nombre="Carlos";
+        persona2.direccion="Nuevos horizontes del sur";
+        persona2.telefono="0985412214";
+        
+        console.log(persona2.nombre);
+
+        //ACCEDER A LA PROPIEDADES DE OBJETOS
+        console.log(persona.nombre);
+        console.log(persona["apellido"]);
+        //for int
+        for(nombrePropiedad in persona){
+            console.log(nombrePropiedad); //sirve para acceder a los parametros del objeto
+            console.log(persona[nombrePropiedad]);//sirve para accedes a los argumentos deñ objeto
+
+
+        }
+        
+
+
+        
+   
+   </script>
+</body>
+</html>

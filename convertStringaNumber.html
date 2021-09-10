@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //covertir un tipo string a un tipo number
+        let minumero="16";
+        let edad=Number(minumero); //convirtiendo de tipo string a number
+        console.log(typeof edad); //aqui podemos ver q se convierte el tipo de dato mi numero a edad definiendo a este como number
+        if(edad>=18){
+            console.log("Puede votar");
+        }else{
+            console.log("Muy joven para votar");
+        }
+        //Utilizando el operador ternario
+        let ternario=(edad>=18) ? "Puede votar" : "No puede votar";
+            console.log(ternario);
+        //console.log(typeof minumero);
+    </script>
+</body>
+</html>

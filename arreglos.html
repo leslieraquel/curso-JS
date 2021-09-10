@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arreglos
+        //let autos=new array(merecdes,volvo,wolswagen);
+        const autos=['bmw','volvo','mercedes benz'];
+        console.log(autos);
+        //para aceder a un elemento de un arreglo
+        console.log(autos[1]);//nos imprimiria el elemento de volvo ya que se encuentra en la posision 1
+        //los arreglos se cuentas desde el indice 0
+        console.log(autos[0]);
+
+        for(i=0;i<autos.length;i++){ //permite recorrer el arreglo
+            console.log(autos[i]);
+
+        }
+        //MODIFICAR UN ELEMENTO DE UN ARREGLO Y COMO AGREGAR
+        autos[2] ="mercedes";
+        console.log(autos[2]);
+        //para agregar un nuevo valor al arreglo
+        autos.push("audi");
+        console.log(autos);
+        //nuevas formas de agregar un elemento a un arreglo
+        console.log(autos.length);
+
+        autos[autos.length]="callidac";
+        console.log(autos);
+        //insertar elementos con un indice hueco
+        autos[6]="porshe";
+        console.log(autos);
+        console.log(autos.length);
+
+        console.log(typeof autos);
+
+        console.log(Array.isArray(autos)); //isarray es para preguntar si estamos trabajando con un array
+        //otra forma de pr4egntar si se trabaja con arreglos
+        console.log(autos instanceof Array);
+
+
+    </script>
+</body>
+</html>

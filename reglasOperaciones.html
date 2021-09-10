@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* las operaciones se leen de izquierda a derecha teniendo como prioridad
+        primero a la multiplicacion luego division y luego modulo, sin embargo para que la suma
+        se tome como primera prioridad se le coloca entre parentesis*/
+        let a=2,b=3,c=1,d=4,z;
+        z=a*b+c/d;
+        console.log(z);
+        z=c+a*b/d;
+        console.log(z);
+        /* la suma en este caso se realiza primero ya que esta dentro de un parentesis*/
+        z=(a+c)*b;
+        console.log(z);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal={
+            nombre:"leon",
+            especie:"carnivoro",
+            edad:"10 años",
+            idioma:"es",
+            //GET
+            get lenguaje(){
+                this.idioma.toUpperCase();//toUpperCase sirve para cambiar de minuscula a mayuscula
+            },
+            set lenguaje(lenguaje){ //sirve para modificar los valores del atributos del objeto(recibir)
+                this.idioma=lenguaje.toUpperCase();
+            },
+            get NombreTipo(){ //lee la informacionn y se pone como una proiedad agregando get
+                return "Un"+" "+this.nombre+" es "+this.especie;
+            }
+        }
+        console.log(animal.NombreTipo);//imprimiendo la funcion ya no es necesario poner"()"
+        console.log(animal.lenguaje);
+        animal.lenguaje="en";
+        console.log(animal.idioma);
+        //get:significa obtener permite accder a los valores de nuestras propiedades
+        //set:se utiliza para modificar los valores de los atributos de los objetos
+
+        //SET
+
+
+    </script>
+</body>
+</html>

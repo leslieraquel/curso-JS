@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prototype
+
+        function Estudiante(nombre, apellido, correo, edad){
+            this.nombre=nombre;
+            this.apellido=apellido;
+            this.correo=correo;
+            this.edad=edad;
+            this.nombreCompleto=function(){
+                return this.nombre+ " "+this.apellido;
+            }
+        }
+        //agregar una nueva propiedad a todos los objetos en general con prototype
+        Estudiante.prototype.tel="333312"; //agregando la propiedad tel
+
+        let jose= new Estudiante("juan","jimenez","juan@hotmail.com","22");
+        jose.tel="33331215"
+        console.log(jose.tel);
+        let maria= new Estudiante("juan","jimenez","juan@hotmail.com","22");
+        console.log(maria.tel);
+    </script>
+</body>
+</html>

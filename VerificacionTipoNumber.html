@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //preguntar si el valor de la variable es un numero o no
+        let minumero="098664474";
+        let telefono=Number(minumero);
+        if(isNaN(minumero)){
+            console.log("No es un numero de telefno vuelva a intentarlo");
+        }else{
+            console.log("Es un numero de telefono");
+        }
+        /*otro ejercicio que en caso de que la edad sea un numero si es mayor que 118 años diga que puede
+        votar en caso contrario no*/
+        let numero="18";
+        let edad=Number(numero);
+        if(isNaN(numero)){
+            console.log("Lo que ingresaste no es una edad valida");
+        }else{
+            if(edad>=18){
+                console.log("Puedes votar");
+
+            }else{
+                console.log("Eres muy joven para votar");
+            }
+        }
+        //haz el mismo ejercicio con operador ternario
+        numer2="15";
+        edad2=Number(numer2);
+        if(isNaN(numer2)){
+            console.log("No es un numero");
+        }else{
+            let resultado1=(numer2>=18)? "Puedes votar":"No puedes votar";
+            console.log(resultado1);
+        }
+
+    </script>
+</body>
+</html>

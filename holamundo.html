@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre ='Carlos'
+        console.log(nombre);
+        nombre=10;
+        console.log(typeof nombre);
+
+        var numero=100;
+        console.log(numero);
+
+        var objeto={
+            nombre:"Leslie",
+            apellido:"Guaman",
+            telefono:"0987451122"
+        }
+        console.log(typeof objeto);
+        
+        //tipo de dato boolean
+        var bandera=true;
+        console.log(bandera);
+        
+        //funciones:permite realizar cierta tarea, va a permitir reutilizar lineas de codigo
+        function mifuncion(){} 
+        console.log(mifuncion);    
+        //tipo de dato symbol:sirve para crear un valor unico de una variable
+        var simbolo=Symbol("mi simbolo");
+        console.log(simbolo);
+
+        //clases es una funcion los atributos se especifican atraves de un constructor
+        class persona{
+            constructor(nombre,apellido){
+                this.nombre=nombre;
+                this.apellido=apellido;      
+            }
+        }
+        console.log(typeof persona);
+        //tipo de dato undefined
+        var x;
+        console.log(x);
+        var x=undefined;
+        console.log(x);
+        //null:ausencia de valor
+        var y = null;
+        console.log(typeof y);
+        //arrays
+        var autos=['wwb','audi','volvo'];
+        console.log(autos);
+
+        var z='';
+        console.log(z);
+
+
+
+
+    </script>
+</body>
+</html>

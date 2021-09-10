@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //clase padre
+        class Persona{
+            constructor(nombre,apellido){
+                this._nombre=nombre;
+                this._apellido=apellido;
+
+            }
+            get nombre(){
+                return this._nombre;
+            }
+            set nombre(nombre){
+                this._nombre=nombre;
+            }
+            get apellido(){
+                return this._apellido;
+            }
+            set apellido(apellido){
+                this._apellido=apellido;
+            }
+            //si se crea un metodo en la clase padre la heredara automaticamente a la clase hija
+            //creando metodo
+            NombreCompleto(){
+                return this._nombre+" "+this._apellido;
+            }
+        
+        }
+        //clase hija
+        class Empleado extends Persona{ //con la palabra extends se puede heredar atributos de la clase padre
+            constructor(nombre,apellido,departamento){// se debe pasar los parametros de la clase padre
+                super(nombre,apellido);//con la palabra super se esta llamando al constructor de la clase padre
+                this._departamento=departamento;
+            }
+            get departamento(){
+                return this._departamento;
+            }
+            set departamento(departamento){
+                this._departamento=departamento;
+            }
+            //para llamar metodos de la clase padre se utuliza la plabra super
+            //vamos hacer una sobre escritura del metodo para agregar el atributo de departamento
+            NombreCompleto(){ // el metodo se debe escribir exacatemente como esta escrito en la clase padre
+                return super.NombreCompleto()+" ,"+this._departamento;
+            }
+        }
+
+        let persona1= new Persona("Juan","Perez");
+        console.log(persona1);
+        let empleado1=new Empleado("leslie","Guaman","sistemas");
+        console.log(empleado1);
+        //comprobando que se esta heredando
+        console.log(empleado1.nombre)
+        //comprbando que se esta herdando el metodo de la clase padre a la clase hija
+        console.log(empleado1.NombreCompleto());
+        //comprobando la sobre escritura y el llamado del metodo
+        console.log(empleado1.NombreCompleto());
+
+    </script>
+</body>
+</html>

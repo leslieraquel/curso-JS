@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Persona{
+            constructor(nombre,apellido){
+                this._nombre=nombre;
+                this._apellido=apellido;
+
+            }
+            get nombre(){
+                return this._nombre;
+            }
+            set nombre(nombre){
+                this._nombre=nombre;
+            }
+
+            NombreCompleto(){
+                return this._nombre+" "+this._apellido
+            }
+            toString(){
+                return NombreCompleto();
+            }
+            static saludar(){ //creando metodo estatico
+                console.log("saludos desde metodo estatic")
+            }
+            static saludar2(persona){
+                console.log(persona.nombre);
+            }
+        }
+        //clase hija 
+        
+        class Empleado extends Persona{
+            constructor(nombre,apellido,departamento){
+                super(nombre,apellido);
+                this._departamento=departamento;
+            }
+            get departamento(){
+                return this._departamento;
+            }
+            set departamento(departamento){
+                this._departamento=departamento;
+            }
+            NombreCompleto(){
+                return NombreCompleto()+","+this._departamento;
+            }
+        }
+        // creado objetos
+        let persona1=new Persona("juan","perez");
+        console.log(persona1.toString());
+        let empleado1 = new Empleado("leslie","jimenez")
+        console.log(persona1.toString());
+
+        //persona1.saludar(); //no es posible llamar un metodo estatico desde un objeto pero si desde una clase
+
+        //llamando desde una clase
+        console.log(Persona.saludar())
+
+    </script>
+</body>
+</html>

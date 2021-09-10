@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mes=1;
+        let estacion;
+        switch(mes){
+            case 1: case 2: case 12:
+                estacion="Invierno";
+                break;
+            case 3: case 4: case 5:
+                estacion="Primavera"
+                break;
+            case 6: case 7: case 8:
+                estacion="Verano";
+            case 11: case 10:
+                estacion="Otoño";
+                break;
+            default:
+                estacion="Estacion desconocida";
+                break;
+        }
+        console.log(estacion);
+    </script>
+</body>
+</html>
